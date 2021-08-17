@@ -32,7 +32,7 @@ public class Monty implements ApplicationListener{
 		Gdx.gl.glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		Gdx.gl.glClear(16384);
 		this.batch.setProjectionMatrix(this.camera.combined);
-		//InputManager.handleInput(this.camera);
+		InputManager.handleInput(this.camera);
 		this.batch.begin();
 		GameManager.renderGame(this.batch);
 		this.batch.end();

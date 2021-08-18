@@ -136,8 +136,8 @@ public class GameManager {
 		for(int i=0; i<GameManager.doors.size; i++) {
 			GameManager.doors.get(i).isOpen = false;
 			//reset the sprite positions
-			GameManager.doors.get(i).closeSprite.setPosition(GameManager.doors.get(i).position.x,GameManager.doors.get(i).position.x);
-			GameManager.doors.get(i).openSprite.setPosition(GameManager.doors.get(i).position.x,GameManager.doors.get(i).position.x);
+			GameManager.doors.get(i).closeSprite.setPosition(GameManager.doors.get(i).position.x,GameManager.doors.get(i).position.y);
+			GameManager.doors.get(i).openSprite.setPosition(GameManager.doors.get(i).position.x,GameManager.doors.get(i).position.y);
 		}
 		GameManager.hasWon = false;
 		GameManager.level = GameManager.level.START;

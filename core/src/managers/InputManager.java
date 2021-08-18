@@ -19,9 +19,17 @@ public class InputManager {
 					break;
 				}
 			}
+			handleRestart(touchX, touchY);
 		}
 	}
 	
+	private static void handleRestart(final float touchX, final float touchY) {
+		if((touchX >= GameManager.restartSprite.getX()) && (touchX <= GameManager.restartSprite.getX() + GameManager.restartSprite.getWidth()) 
+		&& (touchY >= GameManager.restartSprite.getY()) && (touchY <= GameManager.restartSprite.getY() + GameManager.restartSprite.getHeight())) {
+			GameManager.restartGame();
+		}
+	}
+
 	public static boolean handleDoor(final Door door, final float touchX, final float touchY, final int doorIndex) {
 		if((touchX >= door.position.x) && (touchX <= door.position.x + door.width) 
 		&& (touchY >= door.position.y) && (touchY <= door.position.y + door.height)) {
